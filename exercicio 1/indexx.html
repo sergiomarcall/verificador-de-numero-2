@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificar Número</title>
+  <script>
+    function verificarNumero() {
+      // Captura o número inserido pelo usuário
+      var numero = document.getElementById("numero").value;
+      
+      // Converte o valor para um número
+      numero = parseFloat(numero);
+      
+      // Verifica se o número é positivo, negativo ou zero
+      var resultado = "";
+      if (numero > 0) {
+        resultado = "O número " + numero + " é positivo.";
+      } else if (numero < 0) {
+        resultado = "O número " + numero + " é negativo.";
+      } else {
+        resultado = "O número é zero.";
+      }
+      
+      // Exibe o resultado
+      document.getElementById("resultado").innerText = resultado;
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align:center; padding: 20px;">
+    <h2>Verificador de Números</h2>
+    <p>Digite um número e clique em "Verificar":</p>
+    <input type="text" id="numero" placeholder="Digite um número" />
+    <button onclick="verificarNumero()">Verificar</button>
+    <p id="resultado"></p>
+  </div>
+</body>
+</html>
